@@ -1,0 +1,13 @@
+overwrite: true
+schema: "https://graphqlzero.almansi.me/api"
+documents: './src/graphql/*.{ts,tsx}'
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      withComponent: true
+      withHOC: false
+      withHooks: true
