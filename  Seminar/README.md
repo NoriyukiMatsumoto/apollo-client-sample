@@ -1,5 +1,5 @@
 # Overview
-Apollo Clientをプロジェクトで3ヶ月使ってみて、フロントのデータソースアクセス周りの実装が簡単だったので、みんなに布教したい。
+Apollo Clientをプロジェクトで3ヶ月使ってみて、フロントのデータソースアクセス周りの実装が簡単だったので、みんなに布教したい。<br>
 今後の新しいプロジェクトもApollo Clientを使って欲しいので、紹介します。
 
 # [Apollo Client](https://www.apollographql.com/docs/)とは？
@@ -14,6 +14,7 @@ GraphQL自体はフレームワークや特定の技術を指すのではなく�
 
 <details>
 <summary>サンプル GraphQL</summary>
+
 ```graphql
 query {
   posts(options: {
@@ -117,7 +118,7 @@ URLにアクセスして画面が表示されるまでに、以下のような�
     fetchPolicy: "cache-and-network",
   });
 ```
-[graphql-codegenerator](https://graphql-code-generator.com/)で生成されたHooksを使用するとデータソースへの問い合わせができます。
+[graphql-codegenerator](https://graphql-code-generator.com/)で生成されたHooksを使用して、簡単にデータソースへの問い合わせができます。
 
 ## 2.ローカルのデータをデータソースに対するリクエストのパラメータに合う形に加工する & 3.取得したデータをViewが使いやすい形に加工する
 Viewが扱いやすいようなクエリを書けばいいだけ。
@@ -137,7 +138,7 @@ export const QUERY_POST = gql`
   }
 `;
 ```
-型が定義されるので使いやすい！
+型が定義されるので使いやすい！<br>
 ![type](./img/type.png)
 
 
